@@ -315,7 +315,7 @@ function WordPasterManager()
 	};
 	this.CloseDialogFile = function ()
 	{
-	    $('#wrapClose').click();
+		$.skygqbox.hide();
 	};
 
     //打开粘贴图片对话框
@@ -325,7 +325,7 @@ function WordPasterManager()
 	};
 	this.CloseDialogPaste = function ()
 	{
-	    $('#wrapClose').click();
+		$.skygqbox.hide();
 	};
 	this.InsertHtml = function (html)
 	{
@@ -337,8 +337,6 @@ function WordPasterManager()
 	this.SetEditor = function (edt)
 	{
 	    _this.Editor = edt;
-	    //_this.WordPaster.Editor = edt;
-	    //_this.ImagePaster.Editor = edt;
 	};
 
     //单击按钮粘贴
@@ -605,7 +603,7 @@ function WordPasterManager()
             }
         }
         if (needUpdate) this.need_update();
-        else { $('#wrapClose').click(); }
+        else { $.skygqbox.hide(); }
     };
     this.recvMessage = function (msg)
 	{
